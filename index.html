@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Animated Bubble</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<section>
+		<h2>Preeti Dhaked</h2>
+	</section>
+	<script type="text/javascript">
+		function createBubble() {
+			const section = document.querySelector('section');
+			const createElement = document.createElement('span');
+			var size = Math.random() * 60;
+ 
+			createElement.style.width = 20 + size + 'px';
+			createElement.style.height = 20 + size + 'px';
+			createElement.style.left = Math.random() * innerWidth + 'px';
+			section.appendChild(createElement);
+
+			setTimeout(() => {
+				createElement.remove()
+			},4000)
+		}
+		setInterval(createBubble, 50);
+	</script>
+</body>
+</html>
